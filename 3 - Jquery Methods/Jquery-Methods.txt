@@ -1,2 +1,10 @@
 JQUERY METHODS
 
+css() // TODO: Seçtiğimiz html etiketine bir yada birden fazla css özelliği vermek için kullanırız.
+text() // TODO: 
+val() // TODO : Bilgiyi okumak için
+attr() // TODO: 
+html()
+addClass() // TODO: Class ekleme
+removeClass() // TODO: Class Silme
+toggleClass() // TODO: Class ekleme ve silme tek kontrol ile yaparız
