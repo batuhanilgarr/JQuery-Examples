@@ -6,11 +6,36 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>JQuery Examples</title>
- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="index.js"></script>
 </head>
 
 <body>
+ <h3>JQuery Dersleri</h3>
+ <a href="#">link</a>
+ <ul id="liste">
+  <li class="item">JQuery Reference</li>
+  <li>Selectors <a href="#">link</a></li>
+  <li class="item">JQuery Plugins</li>
+ </ul>
 
+ <ul>
+  <li class="item">JQuery Reference</li>
+  <li>Selectors <a href="#">link</a></li>
+  <li class="item">JQuery Plugins</li>
+ </ul>
+
+ <script>
+  console.log($("#liste")); // TODO: #liste elementini seçer
+  console.log($("h3")); // TODO: h3 elementini seçer
+  console.log($("ul")); // TODO: ul elementini seçer
+  console.log($("li")); // TODO: li elementini seçer
+  console.log($(".item")); // TODO: .item classının oluşturduğu tüm elementleri seçer
+  console.log($("a")); // TODO: Tüm a elementlerini seçer
+  console.log($("ul li a")); // TODO : ul etiketinin altındaki a elementini seçer
+  console.log($("#liste li a")); // TODO : #liste etiketinin altındaki a elementini seçer
+
+ </script>
 </body>
 
 </html>
