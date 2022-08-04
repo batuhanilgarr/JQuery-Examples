@@ -1,3 +1,5 @@
+SELECTORS
+
 İd = $('#container'); // TODO: Belirtilen id'ye sahip elementi bulur.
 
 Class = $('.item'); // TODO: Belirtilen Class'a sahip elementleri bulur.
