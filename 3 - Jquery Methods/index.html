@@ -7,6 +7,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Jquery Methods</title>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -17,8 +18,10 @@
   <li>Jquery Animations</li>
  </ul>
 
- <input id="ad" type="text" placeholder="Adınız"/>
- <input id="soyad" type="text" placeholder="Soyadınız"/>
+ <img src="koala.jpg" width="200">
+
+ <input id="ad" type="text" placeholder="Adınız" />
+ <input id="soyad" type="text" placeholder="Soyadınız" />
  <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
 
  <script>
@@ -31,10 +34,13 @@
 
   $("input").val("ssss");
 
-  function adsoyad(){
+   $("img").attr("width", "400"); // TODO : Change the width of the img element
+
+  function adsoyad() {
    var ad = $("#ad").val();
    var soyad = $("#soyad").val();
    console.log("Adınız ve Soyadınız : " + ad + " " + soyad);
+
   }
 
  </script>
