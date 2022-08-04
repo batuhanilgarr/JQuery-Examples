@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JQuery Examples</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="index.js"></script>
+</head>
+
+<body>
+ <a href="#">link</a>
+
+ <h3 id="header">JQuery Dersleri</h3>
+
+ <ul id="liste">
+  <li class="item">JQuery Reference</li>
+  <li>Selectors <a href="#">link</a></li>
+  <li class="item">JQuery Plugins</li>
+ </ul>
+
+ <script>
+  document.getElementById("header").style.color = "red"; //TODO : Javascript kodu ile id'yi' seçerek rengini kırmızı yapıyoruz.
+
+  $("#header").css("color", "blue"); //TODO : JQuery kodu ile id'yi' seçerek rengini kırmızı yapıyoruz.
+
+  $("#liste a").css("text-decoration", "none"); //TODO : JQuery kodu ile #liste altındaki a'yı' seçerek linklerinin alt çizgilerini yokederiz
+
+  $("a").css("text-decoration", "none"); //TODO : JQuery kodu ile sayfadaki bütün a etiketlerinin alt çizgilerini yok ederiz.
+
+
+  // JQuery ile //
+  var styles = {
+   color: "yellow",
+   fontSize: "20px",
+   border: "1px solid black"
+  }
+
+  $("ul li").css(styles); //TODO : JQuery kodu ile #liste altındaki bütün li etiketlerinin renk, boyut ve çerçeve özelliğini değiştiririz.
+
+
+  // JavaScript ile //
+  var listeler = document.querySelectorAll("li");
+  for (var i = 0; i < listeler.length; i++) { // TODO : Tanımladığımız listeler objesini for döngüsüne girerek dolaşıp renklerini değiştiriyoruz.
+   listeler[i].style.color = "red";
+  }
+
+
+  $("a").css({ // TODO : a etiketlerini bulur ve belirttiğimiz css kodu ile düzenler.
+   color: "yellow",
+   fontSize: "20px",
+   border: "1px solid black"
+  });
+
+$(".item").css({ //TODO : Class ismi "item" olan elementleri bulur ve görünürlük özelliklerini none yapar.
+ display:"none"
+})
+
+ </script>
+
+</body>
+
+</html>

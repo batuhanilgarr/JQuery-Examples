@@ -1,0 +1,5 @@
+Styling Content
+.css(özellikle,değer) //TODO : css ile eklenecek özellikleri belirtmek için kullanılır.
+
+
+
