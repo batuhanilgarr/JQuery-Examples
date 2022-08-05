@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jquery Click Event</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <style>
+  .paragrafrenklendir {
+   color: red;
+   font-size: 25px;
+  }
+ </style>
+
+</head>
+
+<body>
+
+ <p id="p1">Web Developer Eğitimi</p>
+ <p id="p2">Web Developer Eğitimi</p>
+ <p class="paragraf">Web Developer Eğitimi</p>
+ <p class="paragraf">Web Developer Eğitimi</p>
+
+ <script>
+
+  $(document).ready(function () { // document.ready() fonksiyonu sayesinde sayfa yüklendiğinde çalışır.
+
+   $(".paragraf").click(function () { // p1 id'li paragrafımızı tıkladığımızda çalışır.
+    $(this).toggleClass("paragrafrenklendir"); // paragrafımızın class'ını paragrafrenklendir olarak değiştirir.
+   });
+  });
+
+
+ </script>
+
+</body>
+
+</html>

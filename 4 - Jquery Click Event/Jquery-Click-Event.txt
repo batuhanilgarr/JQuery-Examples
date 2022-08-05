@@ -1,0 +1,32 @@
+JQUERY CLİCK EVENT
+
+ $(document).ready(function () { // TODO : document ready
+  console.log("ready!");
+ }); // TODO : ready function
+
+ yada
+
+ $(function () {
+  console.log("ready!");
+ });
+
+
+ Click Event'i Yapımı ; 
+ $(function () { // TODO : click event
+  $(selector).click(function () { // TODO : selector click event
+   console.log("click event çalıştı");
+  });
+ });
+
+
+
+ Örnekler ; 
+
+   $(document).ready(function () { // document.ready() fonksiyonu sayesinde sayfa yüklendiğinde çalışır.
+   console.log('Jquery Hazır'); //Jquery Hazır
+  });
+
+
+  $(function () { // $(document).ready(function () { } ) fonksiyonu  gibi sayfa yüklendiğinde çalışır.
+   console.log('Jquery Hazır'); //Jquery Hazır
+  });
