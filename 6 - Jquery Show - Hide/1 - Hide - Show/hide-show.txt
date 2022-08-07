@@ -1,0 +1,14 @@
+fast - Hızlı
+slow - Yavaş
+
+$(selector).show(speed,callback);
+   işaretçi        Hız süresi
+
+   Hız süresi = 3000 - 3 saniye
+                2000 - 2 saniye gibi
+
+$(selector).show(speed,callback);
+ $("selector").show("fast");
+
+$(selector).hide(speed,callback);
+$(selector).toggle(speed,callback);

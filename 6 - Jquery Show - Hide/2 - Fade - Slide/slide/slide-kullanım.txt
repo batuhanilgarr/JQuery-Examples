@@ -1,0 +1,16 @@
+Jquery Sliding
+
+$(selector).SlideDown(speed,callback); // SlideDown ; Aşağıdan yukarı animation
+
+$(selector).SlideUp(speed,callback); // SlideUp ; Yukardan aşağı animation
+
+$(selector).SlideToggle(speed,callback); // SlideToggle ; Tek seferde aşağıdan yukarı ve yukarıdan aşağı animation
+
+
+
+
+$(selector).SlideDown(speed,callback);
+   işaretçi          Hız süresi
+
+   Hız süresi = 3000 - 3 saniye
+                2000 - 2 saniye gibi

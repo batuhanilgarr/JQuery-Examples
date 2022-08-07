@@ -11,8 +11,24 @@
 
 <body>
 
+ <form>
+  <p>
+   Adı : <input class="control" type="text">
+  </p>
+  <p>
+   Hobiler : <select class="control">
+    <option value="spor" selected="selected">Spor Yapmak</option>
+    <option value="sinema">Sinema</option>
+   </select>
+  </p>
+ </form>
+
  <script>
-  
+  $(document).ready(function () { //TODO: Sayfa hazır olduğunu........
+   $(".control").change(function () { //TODO: Sayfadaki control classını seçer.
+    console.log($(this).val()); //TODO: Seçilen value'yi console yazdırır.
+   });
+  });
  </script>
 
 </body>

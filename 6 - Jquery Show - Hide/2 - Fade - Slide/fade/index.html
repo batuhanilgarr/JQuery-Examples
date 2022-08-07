@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jquery Show / Hide</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+ <p>Sıfırdan Web Developer Eğitimi</p>
+
+ <button id="fadein">Fade In</button>
+ <button id="fadeout">Fade Out</button>
+ <button id="fadeto">Fade To</button>
+ <button id="toggle">Toggle</button>
+
+ <script>
+  $(document).ready(function () {
+
+   $("#fadein").click(function () { // TODO: Hide id'sini seçer
+    $("p").fadeIn("slow"); // TODO: p etiketini 3000 yani 3 saniyede aşağıdan yukarı gizler
+   });
+
+   $("#fadeout").click(function () { // TODO: Show id'sini seçer
+    $("p").fadeOut(1000, function () { // TODO: 1000 yani 1 saniyede yukardan aşağı gösterir
+     alert("paragraf gösterildi");
+    });
+   });
+
+   $("#toggle").click(function () {// TODO: toggle id'sini seçer
+    $("p").fadeToggle("slow"); // TODO: p etiketini yukardan aşağı / aşağıdan yukarı gösterir ve gizler
+   });
+
+   $("#fadeto").click(function () {// TODO: toggle id'sini seçer
+    $("p").fadeTo("slow",0.2); // TODO: p etiketinin gitmesini istediğimiz opacity değerine sahip olur
+   });
+
+  });
+ </script>
+
+</body>
+
+</html>

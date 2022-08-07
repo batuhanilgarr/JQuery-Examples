@@ -1,0 +1,6 @@
+JQUERY EFFECTS
+
+- Hide / Show
+- Fade
+- Slide
+- Animate

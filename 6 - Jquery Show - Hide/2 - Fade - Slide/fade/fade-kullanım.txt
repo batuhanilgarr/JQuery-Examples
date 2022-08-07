@@ -1,0 +1,16 @@
+Jquery Fading
+
+$(selector).fadeIn(speed,callback); // fadeIn ; opacity görünür hale gelene kadar efektli
+
+$(selector).fadeOut(speed,callback); // fadeOut ; görünür elemeni görünmez hale getirir
+
+$(selector).fadeToggle(speed,callback); // fadeToggle ; Klasik toggle
+
+$(selector).fadeTo(speed,callback); // fadeTo ; Nesnenin opcatiy süresini belli bir süreye kadar oluşturma
+
+
+$(selector).fadeIn(speed,callback);
+   işaretçi        Hız süresi
+
+   Hız süresi = 3000 - 3 saniye
+                2000 - 2 saniye gibi

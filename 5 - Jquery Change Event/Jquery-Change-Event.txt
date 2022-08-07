@@ -1,0 +1,14 @@
+JQUERY EVENTS
+
+- $(document).ready()
+- click()
+- dblclick()
+- change()
+- mouseenter()
+- mouseleave()
+- mousedown()
+- mouseup()
+- hover()
+- focus()
+- blur()
+- on()
