@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jquery Show / Hide</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <style>
+  #box {
+   position: absolute;
+   top: 50px;
+   left: 10px;
+   width: 200px;
+   height: 200px;
+   background-color: blue;
+  }
+ </style>
+</head>
+
+<body>
+
+ <button id="animate">Animate</button>
+
+ <div id="box">
+  Merhaba
+ </div>
+
+ <script>
+  $(document).ready(function () { // document.ready() is used to make sure that the code is executed after the DOM is loaded.
+   $("#animate").click(function () { // When the user clicks on the button,
+
+    var box = $("#box"); // We select the box element.
+
+    box.animate({ // animate the box
+     left: '200px', // move it 200px to the right
+     width:'300px', // make it 300px wide
+     height:'300px', // make it 300px high
+    }
+    , 3000, function(){ // set the duration of the animation to 3 seconds and use a function to call after the animation is done
+     alert("Animasyon Bittiğğ."); // alert the user after the animation is done
+    }); 
+
+    box.animate({fontSize: '50px'}, 3000); // animate the font size of the box to 50px
+   });
+  });
+ </script>
+</body>
+
+</html>
