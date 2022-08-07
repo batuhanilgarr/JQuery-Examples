@@ -1,0 +1,3 @@
+Web tasarım uygulamalarınızda veri doğrulamak (validation) olmazsa olmazlardandır. Gönderilen verilerin yanlış olmaması veya istenen verilen muhakkak girilmesi gereken durumlarda bu tip uygulamalara ihtiyaç duyarsınız.
+
+Veri doğrulama işlemi, düzgün veri girişinden ziyade kötü amaçlı kullanımları da engellemek için mecburidir.
