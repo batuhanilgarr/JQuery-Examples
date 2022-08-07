@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jquery MessageBox</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+  }
+
+  #message-box {
+   background-color: green;
+   text-align: center;
+   color: white;
+  }
+
+  #header {
+   cursor: pointer;
+   height: 25px;
+   padding: 10px;
+   border-bottom: 1px solid #fff;
+  }
+
+  #content {
+   height: 200px;
+   padding: 10px;
+   display: none;
+  }
+
+  #close{
+   float: right;
+   cursor: pointer;
+  }
+
+  #close:hover {
+   color: black;
+  }
+ </style>
+
+ <script>
+  $(function () { // document.ready() is used to make sure that the code is executed after the DOM is loaded.
+   $("#header").click(function () { // When the user clicks on the button,
+    $("#content").slideToggle(); // slideToggle() is used to show or hide the content.
+   });
+
+   $("#close").click(function () { // When the user clicks on the button,
+    $("#message-box").hide("slow"); // hide() is used to hide the content.
+   });
+
+  });
+ </script>
+
+</head>
+
+<body>
+
+ <div id="message-box">
+  <div id="header">
+   <span id="close">X</span>
+   Mesajınız Var
+  </div>
+  <div id="content">
+
+  </div>
+ </div>
+
+ <script>
+
+ </script>
+</body>
+
+</html>
