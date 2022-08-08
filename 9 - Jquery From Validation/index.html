@@ -8,9 +8,113 @@
  <title>Jquery Form Validation</title>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+ <style>
+  #wrapper {
+   width: 700px;
+   margin: 0 auto;
+  }
+
+  body {
+   font-size: 180%;
+  }
+
+  input {
+   padding: 15px;
+   font-size: 25px;
+   border-radius: 5px;
+   border: 1px solid grey;
+   width: 520px;
+  }
+
+  label {
+   display: inline-block;
+   width: 140px;
+  }
+
+  .form-group {
+   margin-bottom: 15px;
+  }
+
+  button {
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   border: none;
+   margin-top: 20px;
+   width: 100%;
+  }
+
+  #error {
+   color: red;
+   text-align: left;
+  }
+ </style>
+
 </head>
 
 <body>
+
+ <div id="wrapper">
+
+  <div id="error">
+
+  </div>
+
+  <div class="form-group">
+   <label for="email">Email</label>
+   <input type="text" name="email" id="email" placeholder="Your Email">
+  </div>
+
+  <div class="form-group">
+   <label for="phone">Telefon</label>
+   <input type="text" name="phone" id="phone" placeholder="Your phone">
+  </div>
+
+  <div class="form-group">
+   <label for="password">Parola</label>
+   <input type="text" name="password" id="password" placeholder="Your password">
+  </div>
+
+  <div class="form-group">
+   <label for="repassword">Parola Tekrar</label>
+   <input type="text" name="repassword" id="repassword" placeholder="Your repassword">
+  </div>
+
+  <button id="btn">Kaydet</button>
+
+ </div> <!-- #wrapper -->
+
+ <script>
+  $(function () {
+
+   var errormessage = ""; // error message
+
+   function isEmail(){
+    var pattern = "'\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$";
+   }
+
+   $("#btn").click(function () { // click event on button
+    if ($("#email").val() == "") { // if email is empty
+     errormessage += "<p>Email alanı zorunlu alan</p>"; // add error message
+    }
+    if ($("#phone").val() == "") { // if phone is empty
+     errormessage += "<p>Telefon alanı zorunlu alan</p>"; // add error message
+    }
+    if ($("#password").val() == "") { // if password is empty
+     errormessage += "<p>Password alanı zorunlu alan</p>"; // add error message
+    }
+    if ($("#password").val() != $("#repassword").val()) { // if password and repassword are not equal
+     errormessage += "<p>Parola alanları eşleşmiyor</p>"; // add error message
+    }
+
+    if (errormessage != "") { // if error message is not empty
+     $("#error").html(errormessage); // show error message
+    }
+   });
+  });
+ </script>
 
 </body>
 
