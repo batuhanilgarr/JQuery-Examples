@@ -1,0 +1,26 @@
+<p class="float-right">
+    <a href="#" class="backtotop btn btn-primary">Back to top</a>
+   </p>
+
+
+
+
+
+
+<script>
+   $(document).ready(function(){ //when the document is ready
+    $(window).scroll(function(){ //when the user scrolls
+     if ($(window).scrollTop() > 100){ //if the user has scrolled more than 100px from the top of the page
+      $('.backtotop').fadeIn(); //show the back to top button
+     } else { //otherwise
+      $('.backtotop').fadeOut(); //hide the back to top button
+     }
+    });
+
+    $(".backtotop").click(function(){ //when the user clicks on the back to top button
+     $("html, body").animate({scrollTop: 0}, 700); //scroll to the top of the page
+     return false; //prevent the page from jumping
+    });
+
+   });
+  </script>
