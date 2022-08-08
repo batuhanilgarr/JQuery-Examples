@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Jquery Form Validation</title>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <title>Jquery</title>
+ <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
 
  <style>
   #wrapper {
@@ -28,7 +25,7 @@
 
   label {
    display: inline-block;
-   width: 140px;
+   width: 170px;
   }
 
   .form-group {
@@ -37,7 +34,7 @@
 
   button {
    background-color: #4CAF50;
-   color: white;
+   color: #fff;
    padding: 14px 20px;
    border-radius: 5px;
    cursor: pointer;
@@ -56,7 +53,9 @@
 
 <body>
 
+
  <div id="wrapper">
+
 
   <div id="error">
 
@@ -64,56 +63,72 @@
 
   <div class="form-group">
    <label for="email">Email</label>
-   <input type="text" name="email" id="email" placeholder="Your Email">
+   <input type="text" name="email" id="email" placeholder="your email">
   </div>
 
   <div class="form-group">
    <label for="phone">Telefon</label>
-   <input type="text" name="phone" id="phone" placeholder="Your phone">
+   <input type="text" name="phone" id="phone" placeholder="phone">
   </div>
 
   <div class="form-group">
    <label for="password">Parola</label>
-   <input type="text" name="password" id="password" placeholder="Your password">
+   <input type="text" name="password" id="password" placeholder="email">
   </div>
 
   <div class="form-group">
    <label for="repassword">Parola Tekrar</label>
-   <input type="text" name="repassword" id="repassword" placeholder="Your repassword">
+   <input type="text" name="repassword" id="repassword" placeholder="email tekrar">
   </div>
 
   <button id="btn">Kaydet</button>
 
- </div> <!-- #wrapper -->
+ </div>
 
  <script>
-  $(function () {
 
-   var errormessage = ""; // error message
+  $(function () { // document ready
 
-   function isEmail(){
-    var pattern = "'\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$";
+   function isEmail(email) { // email kontrolü
+    var pattern = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/; // email pattern string kontrolü tanımlıyoruz
+    return pattern.test(email);
    }
 
-   $("#btn").click(function () { // click event on button
-    if ($("#email").val() == "") { // if email is empty
-     errormessage += "<p>Email alanı zorunlu alan</p>"; // add error message
-    }
-    if ($("#phone").val() == "") { // if phone is empty
-     errormessage += "<p>Telefon alanı zorunlu alan</p>"; // add error message
-    }
-    if ($("#password").val() == "") { // if password is empty
-     errormessage += "<p>Password alanı zorunlu alan</p>"; // add error message
-    }
-    if ($("#password").val() != $("#repassword").val()) { // if password and repassword are not equal
-     errormessage += "<p>Parola alanları eşleşmiyor</p>"; // add error message
+   $("#btn").click(function () { // kaydet butonuna tıklandığında
+
+    var errormessage = ""; // hata mesajının başlangıç değeri
+    $("#error").html("");
+
+    if ($("#email").val() == "") { // email alanı boş ise
+     errormessage += "<p>email alanı zorunlu alan</p>"; // hata mesajının içine ekliyoruz
     }
 
-    if (errormessage != "") { // if error message is not empty
-     $("#error").html(errormessage); // show error message
+    if (isEmail($("#email").val()) == false) { // email kontrolü yapıyoruz
+     errormessage += "<p>email alanı düzgün girilmedi.</p>"; // hata mesajının içine ekliyoruz
+    }
+
+    if ($.isNumeric($("#phone").val()) == false) { // telefon kontrolü yapıyoruz (sadece rakamlar)
+     errormessage += "<p>telefon alanı düzgün girilmemiş</p>"; // hata mesajının içine ekliyoruz
+    }
+
+    if ($("#phone").val() == "") { // telefon alanı boş ise 
+     errormessage += "<p>telefon alanı zorunlu alan</p>"; // hata mesajının içine ekliyoruz
+    }
+
+    if ($("#password").val() == "") { // parola alanı boş ise
+     errormessage += "<p>password alanı zorunlu alan</p>"; // hata mesajının içine ekliyoruz
+    }
+
+    if ($("#password").val() != $("#repassword").val()) { // parola alanı ile parola tekrar alanı aynı değilse
+     errormessage += "<p>parola alanları eşleşmiyor</p>"; // hata mesajının içine ekliyoruz
+    }
+
+    if (errormessage != "") { // hata mesajı boş değilse
+     $("#error").html(errormessage); // hata mesajının içine ekliyoruz
     }
    });
   });
+
  </script>
 
 </body>
